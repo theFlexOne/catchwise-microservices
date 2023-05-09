@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="fish-service" />
+        <module name="api-gateway" />
         <module name="discovery-server" />
         <module name="lake-service" />
       </profile>
@@ -20,6 +21,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api-gateway" options="-parameters" />
       <module name="catchwise-microservices" options="-parameters" />
       <module name="discovery-server" options="-parameters" />
       <module name="fish-service" options="-parameters" />

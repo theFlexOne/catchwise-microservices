@@ -14,7 +14,7 @@ import java.util.List;
 public class LakeServiceImpl implements LakeService {
 
     final LakeRepository lakeRepository;
-    final WebClient webClient;
+    final WebClient.Builder webClientBuilder;
 
 
     @Override
@@ -30,8 +30,8 @@ public class LakeServiceImpl implements LakeService {
     @Override
     public Lake addFishToLake(Long lakeId, Long fishId) {
         Lake lake = lakeRepository.findById(lakeId).orElseThrow();
-        String isValidFishId = webClient.get()
-                .uri("http://localhost:8081/api/fish/" + fishId)
+        String isValidFishId = webClientBuilder.build().get()
+                .uri("http://fish-service/api/fish/" + fishId)
                 .retrieve()
                 .bodyToMono(String.class)
                 .block();

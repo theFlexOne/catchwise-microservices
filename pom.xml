@@ -19,6 +19,7 @@
         <module>fish-service</module>
         <module>lake-service</module>
         <module>discovery-server</module>
+        <module>api-gateway</module>
     </modules>
 
     <properties>
