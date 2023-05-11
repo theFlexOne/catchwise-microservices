@@ -18,9 +18,15 @@ public class Fish {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
+    private String family;
+
+    @Column(nullable = false)
+    private String genus;
+
+    @Column(nullable = false)
+    private String species;
+
     private String description;
     private String identification;
-
 
 }

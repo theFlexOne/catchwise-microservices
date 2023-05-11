@@ -19,8 +19,9 @@ public class Lake {
     private Long id;
 
     private String name;
-    private String notes;
+    private String state;
     private String county;
+    private Integer countyId;
 
     @ElementCollection
     @CollectionTable(name = "lake_fish", joinColumns = @JoinColumn(name = "lake_id"))

@@ -12,7 +12,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class FishRequest {
 
-    private String name;
+    private String family;
+    private String species;
+    private String genus;
     private String description;
     private String identification;
 

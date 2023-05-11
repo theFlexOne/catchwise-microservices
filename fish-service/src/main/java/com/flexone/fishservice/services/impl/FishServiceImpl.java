@@ -39,7 +39,7 @@ public class FishServiceImpl implements FishService {
     @Override
     public Fish addFish(FishRequest fishRequest) {
         Fish newFish = Fish.builder()
-                .name(fishRequest.getName())
+                .species(fishRequest.getSpecies())
                 .description(fishRequest.getDescription())
                 .identification(fishRequest.getIdentification())
                 .build();
