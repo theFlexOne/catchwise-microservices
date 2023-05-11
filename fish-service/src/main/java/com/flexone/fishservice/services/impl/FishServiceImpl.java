@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -23,6 +24,10 @@ public class FishServiceImpl implements FishService {
     @Override
     @SneakyThrows
     public Optional<Fish> getFishById(Long id) {
+//        log.info("Waiting 10 seconds to simulate a slow service");
+//        Thread.sleep(10000);
+//        log.info("Done waiting");
+
         return fishRepository.findById(id);
     }
 
